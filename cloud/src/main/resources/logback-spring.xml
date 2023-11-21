@@ -11,7 +11,7 @@
         </encoder>
     </appender>
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>0.0.0.0:5000</destination>
+        <destination>192.168.96.1:5001</destination>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
             <customFields>{"appname":"${appname}"}</customFields>
         </encoder>

@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   elasticsearch:
-    image: elasticsearch:7.6.2
+    image: elasticsearch:7.17.0
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
@@ -12,17 +12,17 @@ services:
       - micro
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:7.6.2
+    image: docker.elastic.co/logstash/logstash:7.17.0
     container_name: logstash
     volumes:
       - ./files/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
-      - "5000:5000"
+      - "5001:5001"
     networks:
       - micro
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.6.2
+    image: docker.elastic.co/kibana/kibana:7.17.0
     container_name: kibana
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
@@ -30,14 +30,6 @@ services:
       - "5601:5601"
     networks:
       - micro
-
-#  intro:
-#    image: piomin/intro-to-spring-boot
-#    container_name: intro
-#    ports:
-#      - "7070:8080"
-#    networks:
-#      - micro
 
 networks:
   micro:
