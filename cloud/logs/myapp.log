@@ -1,0 +1,4 @@
+2023-11-21 00:52:24 [main] INFO  c.e.cloud.CloudApplicationTests - Starting CloudApplicationTests using Java 11.0.19 on DESKTOP-05T8R7U with PID 7304 (started by User in C:\Users\User\Desktop\piotr\cloud)
+2023-11-21 00:52:24 [main] INFO  c.e.cloud.CloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-11-21 00:52:33 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2023-11-21 00:52:34 [main] INFO  c.e.cloud.CloudApplicationTests - Started CloudApplicationTests in 14.291 seconds (JVM running for 18.509)
